@@ -1,4 +1,4 @@
-dl()
+dl() {
 wget https://raw.githubusercontent.com/rooted-cyber/sa-genrated/main/generate_drive_token.py
 wget https://raw.githubusercontent.com/rooted-cyber/sa-genrated/main/gen_sa_accounts.py
 }
