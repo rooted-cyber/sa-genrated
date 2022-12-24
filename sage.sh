@@ -27,13 +27,13 @@ cp -rf token* accou* /sdcard/sa_files
 gen() {
 cd /sdcard
 if [ -e "sa_files" ];then
-echo
+mkdir sa_files
 else
 printf "\n First setup storage permission !!\n\n\n"
 exit
 fi
-mkdir /sdcard/sa_files
-mkdir ~/mbot
+mkdir /sdcard/sa_files > /dev/null 2>&1
+mkdir ~/mbot > /dev/null 2>&1
 cd /sdcard/sa_files
 if [ -e "credentials.json" ];then
 cd /sdcard/sa_files
@@ -61,7 +61,8 @@ pip install google_auth_oauthlib
 pip install google-api-python-client
 pip install google-auth-httplib2
 termux-setup-storage
-mkdir /sdcard/sa_files
+cd /sdcard
+mkdir sa_files
 mkdir ~/mbot
 gen
 }
