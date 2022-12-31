@@ -27,10 +27,9 @@ cp -rf token* accou* /sdcard/sa_files
 gen() {
 cd /sdcard
 if [ -e "sa_files" ];then
-mkdir sa_files
+echo
 else
-printf "\n First setup storage permission !!\n\n\n"
-exit
+mkdir sa_files
 fi
 mkdir /sdcard/sa_files > /dev/null 2>&1
 mkdir ~/mbot > /dev/null 2>&1
@@ -67,7 +66,7 @@ mkdir ~/mbot
 gen
 }
 start() {
-echo -e -n "\033[1;93m Install Requirements (y|n) "
+echo -e -n "\033[1;92m Install Requirements (y|n) "
 read a
 case $a in
 y|Y)ins ;;
